@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="pictureshow.css" type="text/css" rel="stylesheet" />
+    
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li>
+                <div class="first"></div>
+                <div class="scent"></div>
+                <div class="three"></div>
+                <div class="four"></div>
+            </li>
+            <li>
+                <div class="first"></div>
+                <div class="scent"></div>
+                <div class="three"></div>
+                <div class="four"></div>
+            </li>
+            <li>
+                <div class="first"></div>
+                <div class="scent"></div>
+                <div class="three"></div>
+                <div class="four"></div>
+            </li>
+            <li>
+                <div class="first"></div>
+                <div class="scent"></div>
+                <div class="three"></div>
+                <div class="four"></div>
+            </li>
+        </ul>
+        <a href="javascropt:;" class="left">&lt;</a>
+        <a href="javascropt:;" class="right">&gt;</a>        
+    </div>
+<script type="text/javascript">
+	(function(window){
+		var btn = document.querySelectorAll("a");
+		var lis = document.querySelectorAll("li");
+		var num = 0;
+		var flog = true;
+		// 左右按钮点击
+		btn[1].onclick = function(){
+			lunbo(1);
+		};
+		btn[0].onclick = function(){
+			lunbo(0);
+		};
+		lis[lis.length - 1 ].addEventListener("transitionend", function(){
+			flog = true;
+		}, false);
+		// 自动播放
+		var timer = null;
+		timer = setInterval(function(){
+			lunbo(1);
+		}, 3000);
+		var demo = document.querySelector(".container");
+		demo.onmouseover = function(){
+			clearInterval(timer);
+		};
+		demo.onmouseout = function(){
+			timer = setInterval(function(){
+				lunbo(1);
+			}, 3000);
+		};
+		function lunbo(index){
+			if(flog){
+				flog = false;
+				if(index){
+					num++;
+				}else{
+					num--;
+				};
+				for( i = 0 ; i < lis.length ; i++ ){
+					lis[i].style.transform = "rotateX("+num*90+"deg)";
+				};
+			};
+		}
+	})(window)
+</script>
+</body>
+</html>

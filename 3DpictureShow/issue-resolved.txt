@@ -1,0 +1,2 @@
+pictues can not show correctly unless use the author's pictures.
+”background: url(D:mylifefront end_projectscssimg2.jpg) no-repeat;“ Url in css should be the relative path of the css files,write the absolute path is not found.
