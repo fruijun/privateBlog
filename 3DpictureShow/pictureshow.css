@@ -18,7 +18,7 @@
       
      
        .first{background:url(http://cdn.attach.qdfuns.com/notes/pics/201704/19/105658q10w9uwwwoee0e09.jpg) no-repeat;transform:rotateX(0) translateZ(190px);}
-		.scent{background:url(http://cdn.attach.qdfuns.com/notes/pics/201704/19/105658c899c9mz455s2so9.jpg no-repeat;transform:rotateX(-90deg) translateZ(190px);}
+		.scent{background:url(http://cdn.attach.qdfuns.com/notes/pics/201704/19/105658c899c9mz455s2so9.jpg) no-repeat;transform:rotateX(-90deg) translateZ(190px);}
 		.three{background:url(http://cdn.attach.qdfuns.com/notes/pics/201704/19/105657d22etnkqzbkhttew.jpg) no-repeat;transform:rotateX(-180deg) translateZ(190px);}
 		.four{background:url(http://cdn.attach.qdfuns.com/notes/pics/201704/19/105658ky3x779bcwx9990f.jpg) no-repeat;transform:rotateX(90deg) translateZ(190px);}
 		ul li:nth-child(2)>div{background-position:-140px 0}
