@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="D:\mylife\front end_projects\jslib\echarts.min.js"></script>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<div id="main" style="width: 900px;height:600px;"></div>
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+var myChart = echarts.init(document.getElementById('main'));
+// 指定图表的配置项和数据
+var option = {
+    title: {
+        text: '技能雷达图'
+    },
+    tooltip: {},
+    /**legend: {
+        data: ['预算分配（Allocated Budget）', '实际开销（Actual Spending）']
+    },**/
+    radar: {
+        // shape: 'circle',
+        indicator: [
+           { name: 'HTML（5）', max: 100},
+           { name: 'CSS（3）', max: 100},
+           { name: 'JavaScript', max: 100},
+           { name: 'Nodejs', max: 100},
+           { name: 'JAVA', max: 100},
+            { name: 'Linux', max: 100},
+           { name: 'GIT', max: 100}
+        ]
+    },
+    series: [{
+        name: '技能',
+        type: 'radar',
+        // areaStyle: {normal: {}},
+        data : [
+            {
+                value : [80, 80, 85, 90, 70,65, 70],
+                name : '技能分配（Skill Budget）'
+            }
+        ]
+    }]
+};
+// 使用刚指定的配置项和数据显示图表。
+myChart.setOption(option);
+</script>
+</body>
+</html>
