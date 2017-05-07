@@ -1,3 +1,4 @@
+@import 'mixin';
 body{
      font-family: '微软雅黑';
  }
@@ -261,7 +262,7 @@ header{
     position: fixed;
     top: 0;
     right: -200px;
-   transition: right 0.5s;
+   @include transition(right,0.5s,ease);//add ease
    ul {
         margin: 0;
         padding: 0;
@@ -312,13 +313,8 @@ footer{
     width: 45px;
     height: 45px;
     &:hover .wechat-layer{
-    opacity: 1;
-    filter: alpha(opacity=100);
-   -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1);
+    @include opacity(1);
+    @include transformScale(1);
 }
 }
 .wechat-layer{
@@ -327,26 +323,13 @@ footer{
     top: 0px;
     width: 145px;
     height: 145px;
-    background: url(img/wechat.jpg) 45px 50px;
+    background: url(../img/wechat.jpg) 45px 50px;
     background-position: 50px 50px;
     background-repeat:no-repeat;
-    opacity: 0;
-    filter: alpha(opacity=0);
-    -webkit-transform-origin: 50% 100%;
-    -moz-transform-origin: 50% 100%;
-    -o-transform-origin: 50% 100%;
-    -ms-transform-origin: 50% 100%;
-    transform-origin: 50% 100%;
-    -webkit-transform: scale(0.01);
-    -moz-transform: scale(0.01);
-    -ms-transform: scale(0.01);
-    -o-transform: scale(0.01);
-    transform: scale(0.01);
-    -webkit-transition: all 1s;
-    -moz-transition: all 1s;
-     -o-transition: all 1s;
-    -ms-transition: all 1s;
-    transition: all 1s; 
+    @include opacity(0);
+    @include transformOrigin( 50%,100%);
+    @include transformScale(0.01);
+    @include transition(all,1s,ease);//add ease
 }
 #fp-nav{
     display: block;
@@ -354,6 +337,7 @@ footer{
     z-index: 100;
     top: 50%;
     opacity: 1;
+    @include opacity(1);
     box-sizing: border-box;
     ul {
         li{
@@ -377,7 +361,7 @@ footer{
                     border-radius: 50%;
                     position: absolute;
                     z-index: 1;
-                    transition: all .1s ease-in-out;
+                    @include transition(all,.1s,ease-in-out);
                     width: 14px;
                     height: 14px;
                     left: 0!important;
@@ -402,15 +386,8 @@ footer{
     border: 1px solid #a3a3a3;
     color: #a0a0a0;
     font-size: 11px;
-    -webkit-transform: scaleX(2);
-    -moz-transform:scaleX(2);
-    -o-transform: scaleX(2);
-    -ms-transform:scaleX(2);
-    transform: scaleX(2);
-    transition: 400ms all ease;
-    -moz-transition: 400ms all ease;
-    -webkit-transition: 400ms all ease;
-    -o-transition: 400ms all ease;
+    @include transformScaleX(2);
+    @include transition(all,1s,ease);
 }
 .submit-btn{
     float: right;
