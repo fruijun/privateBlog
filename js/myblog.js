@@ -14,6 +14,8 @@ $(function(){
     }
     sidebar_trigger.on('click',showSidebar)
     mask.on('click',hideSidebar)
+
+
     backButton.on('click',function(){
     $('html,body').animate({
         scrollTop:0
@@ -25,6 +27,8 @@ $(function(){
             backButton.fadeOut();
     })
 $(window).trigger('scroll');
+
+
 $('.list-nav').first().css("background","#6090b6");
 $('.list-nav').on('click',function(){
     $(this).css("background","#6090b6");
@@ -36,15 +40,7 @@ $('.list-nav').on('click',function(){
     $("html,body").animate({scrollTop: pos}, 1000);	   
     return false;
 })
-$('.search-text-box').on('focus',function(){
-    this.value='';
-    this.style.width='90px';
-});
-$('.search-text-box').on('blur',function(){
-    this.value='Search';
-    this.style.width='45px';
-    
-});
+
 
 
 
