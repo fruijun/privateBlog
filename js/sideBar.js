@@ -1,10 +1,10 @@
 define(['jquery'],function($){
     'use strict';
-     var showSidebar=function (){
+     var showSideBar=function (){
         mask.fadeIn();
         sidebar.css('right',0);
     };
-    var hideSidebar=function(){
+    var hideSideBar=function(){
          mask.fadeOut();
         sidebar.css('right',-sidebar.width());
     }
@@ -12,12 +12,12 @@ define(['jquery'],function($){
         mask=$('.mask'),
         sidebar_trigger=$('#sidebar_trigger'),
         backButton=$('.backToTop');
-    sidebar_trigger.on('click',showSidebar);
-    mask.on('click',hideSidebar);
+    sidebar_trigger.on('click',showSideBar);
+    mask.on('click',hideSideBar);
    
     return {
         showSideBar: showSideBar,
-         hideSidebar: hideSidebar
+         hideSidebar: hideSideBar
 }
 
 });
